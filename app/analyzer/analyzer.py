@@ -122,7 +122,8 @@ def analyze_test_statistics(repo_url):
                     data
                 )
 
-            logger.info(get_repo_name(repo_url) + "......... Analyzing commit .........." + commit.hash + '.....' + str(commit_datetime))
+            logger.info(get_repo_name(repo_url) + "......... Analyzing commit .........." + \
+                        commit.hash + '.....' + str(commit_datetime))
 
         return results
     except Exception as e:

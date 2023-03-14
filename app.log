@@ -8108,3 +8108,9 @@
 2023-03-14 00:53:32,263 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
 2023-03-14 00:53:32,305 WARNING werkzeug MainThread:  * Debugger is active!
 2023-03-14 00:53:32,331 INFO werkzeug MainThread:  * Debugger PIN: 133-473-503
+2023-03-14 00:55:20,770 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu/My Drive/ndsu/dbms/project/app/analyzer/analyzer.py', reloading
+2023-03-14 00:55:21,071 INFO werkzeug MainThread:  * Restarting with stat
+2023-03-14 00:55:22,466 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-03-14 00:55:22,481 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-03-14 00:55:22,518 WARNING werkzeug MainThread:  * Debugger is active!
+2023-03-14 00:55:22,536 INFO werkzeug MainThread:  * Debugger PIN: 133-473-503
