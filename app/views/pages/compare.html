@@ -1,0 +1,39 @@
+{% extends "layouts/master.html" %}
+
+{% block header %}
+{{ super() }}
+<style type="text/css">
+    h1 { color: #336699; }
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <form action="{{ url_for('web_blueprint.compare_analyze') }}" method="GET">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 mb-3">
+                 <a href="{{ url_for('web_blueprint.index') }}">Go Home</a>
+                <h3 class="text-center my-3">Analyze Test Statistics of Two GitHub Java Projects</h3>
+                <div class="mb-3">
+                    <label for="url1" class="form-label">Project Url 1</label>
+                    <input type="text" class="form-control" id="url1" name="url1" placeholder="GitHub Java Project Url"
+                           value="{{request.args.get('url1')}}">
+                </div>
+                <div class="mb-3">
+                    <label for="url2" class="form-label">Project Url 2</label>
+                    <input type="text" class="form-control" id="url2" name="url2" placeholder="GitHub Java Project Url"
+                           value="{{request.args.get('url2')}}">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary mb-3">Analyze</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+

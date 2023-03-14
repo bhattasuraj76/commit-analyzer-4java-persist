@@ -1,0 +1,47 @@
+{% extends "layouts/master.html" %}
+
+{% block header %}
+{{ super() }}
+<style type="text/css">
+    h1 { color: #336699; }
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h3 class="text-center mb-3">Visualize Test Statistics</h3>
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6 mb-3">
+            <div class="mb-3">
+                <div id='chart' class='chart' ”></div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="{{ url_for('web_blueprint.index') }}">Go Back</a>
+                <form action="{{ url_for('web_blueprint.compare') }}" method="GET">
+                    <input type="hidden" name="url1" value="{{request.args.get('url')}}">
+                    <div class="mb-3 text-right">
+                        <button type="submit" class="btn btn-primary btn-text mb-3">Compare</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+{{ super() }}
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{graphJSON | safe}};
+  Plotly.plot('chart',graphs,{});
+
+</script>
+{% endblock %}
