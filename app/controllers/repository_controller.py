@@ -22,6 +22,7 @@ class RepositoryController:
     def analyze(self):
         try:
             req_payload = request.args
+            # Check if the repository is previously analyzed and records are present in database
             repository = db.session.query(Repository).filter_by(url=req_payload["url"]).first()
             if repository:
                 added = db.session.query(TestCase) \
