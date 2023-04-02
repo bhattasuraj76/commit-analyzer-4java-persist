@@ -6,8 +6,8 @@ class Repository(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), nullable=False)
     url = db.Column(db.String(255), nullable=False, unique=True)
-    test_cases = db.relationship("TestCase",
-                                 order_by="TestCase.datetime",
+    commits = db.relationship("Commit",
+                                 order_by="Commit.datetime",
                                  )
 
     def __repr__(self):

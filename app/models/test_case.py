@@ -10,18 +10,19 @@ class TestCaseType(str, Enum):
 
 
 class TestCase(db.Model):
-    __tablename__ = 'test_cases'
+    __tablename__ = "test_cases"
     id = db.Column(db.Integer, primary_key=True)
-    hash = db.Column(db.String(255), nullable=False)
-    message = db.Column(db.Text, nullable=True, unique=True)
     filename = db.Column(db.String(255), nullable=False)
-    datetime = db.Column(db.DateTime, nullable=False)
+    testcase = db.Column(db.String(255), nullable=False)
     type = db.Column(db.Enum(TestCaseType), nullable=False)
-    repository_id = db.Column(db.Integer, db.ForeignKey("repositories.id"), index=True)
-    repository = db.relationship("Repository",
-                                 back_populates="test_cases",
-                                 foreign_keys=[repository_id],
-                                 )
+    commit_id = db.Column(db.Integer, db.ForeignKey("commits.id"), index=True)
+    commit = db.relationship(
+        "Commit",
+        back_populates="test_cases",
+        foreign_keys=[commit_id],
+    )
 
-    # def __repr__(self):
-    #     return "<TestCase name={name} url={url}>".format(name=self.name, url=self.url)
+    def __repr__(self):
+        return "<TestCase filename={filename} testcase={testcase}>".format(
+            filename=self.filename, testcase=self.testcase
+        )

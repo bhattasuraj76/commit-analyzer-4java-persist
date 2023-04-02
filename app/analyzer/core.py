@@ -1,11 +1,13 @@
 import re
 from typing import List, Dict, Union
+import logging
 
 from pydriller.domain.commit import ModifiedFile
 
 from .pattern import Pattern
 from .utils import cleanup_function_prototype, get_function_name_from_prototype
 
+logger = logging.getLogger(__name__)
 
 #  Analyze commit files to detect tests cases removed
 def analyze_test_cases_removal_in_commit_file(file: ModifiedFile) \

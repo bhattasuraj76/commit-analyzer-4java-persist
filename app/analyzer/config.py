@@ -20,8 +20,6 @@ OUTPUT_DIRECTORY = os.getenv("OUTPUT_DIR", "../output")
 # Valid java file extensions
 JAVA_FILE_EXT = ['.java']
 
-# Generated csv file headers
-CSV_HEADERS = ['DATETIME', 'HASH', 'COMMIT MSG', 'FILENAME', 'REMOVED TEST CASE', 'CONFIDENCE', '', '', '']
 
 DEFAULT_COMMIT_RANGE_DAYS_INTERVAL = 365
 
