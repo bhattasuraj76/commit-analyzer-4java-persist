@@ -20,12 +20,12 @@
                 <div class="mb-3">
                     <label for="url1" class="form-label">Project Url 1</label>
                     <input type="text" class="form-control" id="url1" name="url1" placeholder="GitHub Java Project Url"
-                           value="{{request.args.get('url1')}}">
+                           value="{{request.args.get('url1') or ''}}">
                 </div>
                 <div class="mb-3">
                     <label for="url2" class="form-label">Project Url 2</label>
                     <input type="text" class="form-control" id="url2" name="url2" placeholder="GitHub Java Project Url"
-                           value="{{request.args.get('url2')}}">
+                           value="{{request.args.get('url2') or ''}}">
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary mb-3">Analyze</button>

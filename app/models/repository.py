@@ -8,6 +8,7 @@ class Repository(db.Model):
     url = db.Column(db.String(255), nullable=False, unique=True)
     commits = db.relationship("Commit",
                                  order_by="Commit.datetime",
+                                 passive_deletes=True
                                  )
 
     def __repr__(self):

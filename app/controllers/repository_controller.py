@@ -4,10 +4,10 @@ import logging
 import pandas as pd
 import plotly
 import plotly.express as px
-from flask import request, render_template
-
+from flask import request, render_template, send_from_directory
+from app.analyzer.helpers import export_to_csv
 from app.services import RepositoryService
-
+from app import app
 
 logger = logging.getLogger(__name__)
 
@@ -50,6 +50,15 @@ class RepositoryController:
     def compare(self):
         return render_template("pages/compare.html")
 
+    def refresh(self):
+        try:
+            req_payload = request.args
+            self.repository_service.delete_repository(req_payload["url"])
+            return self.analyze()
+        except Exception as err:
+            logger.error(err)
+            return err.__str__()
+
     def compare_analyze(self):
         try:
             req_payload = request.args
@@ -88,6 +97,21 @@ class RepositoryController:
             graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
             return render_template("pages/compare_analyze.html", graphJSON=graphJSON)
         except Exception as err:
+            return err.__str__()
+
+    def export(self):
+        try:
+            req_payload = request.args
+            results = self.repository_service.get_all_testcases(req_payload["url"])
+            filename = export_to_csv(
+                headers=["hash", "filename", "testcase", "type"],
+                records=results,
+                filename="report",
+                dir=app.config["CSV_FOLDER"],
+            )
+            return send_from_directory("../"+ app.config["CSV_FOLDER"], filename, as_attachment=True)
+        except Exception as err:
+            logger.error(err)
             return err.__str__()
 
     def plotly(self):

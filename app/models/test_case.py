@@ -15,7 +15,7 @@ class TestCase(db.Model):
     filename = db.Column(db.String(255), nullable=False)
     testcase = db.Column(db.String(255), nullable=False)
     type = db.Column(db.Enum(TestCaseType), nullable=False)
-    commit_id = db.Column(db.Integer, db.ForeignKey("commits.id"), index=True)
+    commit_id = db.Column(db.Integer, db.ForeignKey("commits.id", ondelete='CASCADE'), index=True)
     commit = db.relationship(
         "Commit",
         back_populates="test_cases",

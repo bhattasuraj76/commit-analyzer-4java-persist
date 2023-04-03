@@ -1,21 +1,21 @@
 import csv
-from .config import OUTPUT_DIRECTORY, OUTPUT_FILENAME
 from .utils import *
 
 
-# Exports data as csv file in the configured output_backup_v1.0.1 directory
+# Exports data to a csv file 
 def export_to_csv(
     headers,
-    records
+    records,
+    filename,
+    dir
 ):
-    if not check_dir_exists(OUTPUT_DIRECTORY):
-        create_dir(OUTPUT_DIRECTORY)
+    if not check_dir_exists(dir):
+        create_dir(dir)
 
-    filename = OUTPUT_FILENAME
     if filename.find('.csv') == -1:
         filename += '.csv'
 
-    filepath = OUTPUT_DIRECTORY + "/" + filename
+    filepath = dir + "/" + filename
 
     try:
         with open(filepath, "w", newline="") as csv_file:
@@ -27,7 +27,8 @@ def export_to_csv(
             # Write records
             my_writer.writerows(records)
 
-        print(f"Successfully generated {filename} inside directory {OUTPUT_DIRECTORY}")
+        print(f"Successfully generated {filename} inside directory {dir}")
+        return filename
     except Exception as e:
         raise e
 

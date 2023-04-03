@@ -14,7 +14,14 @@
 <div class="container mt-5">
     <h3 class="text-center mb-3">Visualize Test Statistics</h3>
     <div class="row justify-content-center">
-        <div class="col-12 col-lg-6 mb-3">
+        <div class="col-12 col-lg-6">
+            <form action="{{ url_for('web_blueprint.refresh') }}" method="GET">
+                <input type="hidden" name="url" value="{{request.args.get('url')}}">
+                <div class="my-3 text-end">
+                    <button type="submit" class="btn btn-success btn-text btn-sm">Refresh</button>
+                </div>
+            </form>
+            <a href="{{ url_for('web_blueprint.export')+'?url='+request.args.get('url') }}" target="_blank">Export</a>
             <div class="mb-3">
                 <div id='chart' class='chart' ”></div>
             </div>
@@ -22,10 +29,11 @@
                 <a href="{{ url_for('web_blueprint.index') }}">Go Back</a>
                 <form action="{{ url_for('web_blueprint.compare') }}" method="GET">
                     <input type="hidden" name="url1" value="{{request.args.get('url')}}">
-                    <div class="mb-3 text-right">
+                    <div class="mb-3 text-end">
                         <button type="submit" class="btn btn-primary btn-text mb-3">Compare</button>
                     </div>
                 </form>
+
             </div>
 
         </div>

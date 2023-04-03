@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 from dateutil import tz
 from .pattern import Pattern
-from .config import DATETIME_FORMAT, COMMIT_BASE_URL
+from .config import DATETIME_FORMAT
 
 
 # Checks if file is a candidate file
@@ -52,8 +52,8 @@ def parse_commit_as_hyperlink(url: str, label: str) -> str:
 
 
 # Generate full url for commit hash
-def get_full_commit_url(tail: str) -> str:
-    return COMMIT_BASE_URL + tail
+def get_full_commit_url(head: str, tail: str) -> str:
+    return head + tail
 
 
 # Get name of repository from full url

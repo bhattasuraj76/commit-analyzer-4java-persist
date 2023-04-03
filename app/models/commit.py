@@ -7,17 +7,17 @@ class Commit(db.Model):
     hash = db.Column(db.String(255), nullable=False)
     message = db.Column(db.Text, nullable=True)
     datetime = db.Column(db.DateTime, nullable=False)
-    repository_id = db.Column(db.Integer, db.ForeignKey("repositories.id"), index=True, nullable= False)
+    repository_id = db.Column(db.Integer, db.ForeignKey("repositories.id", ondelete='CASCADE'), index=True, nullable= False)
     repository = db.relationship("Repository",
                                  back_populates="commits",
                                  foreign_keys=[repository_id],
                                  )
-    author_id = db.Column(db.Integer, db.ForeignKey("authors.id"), index=True, nullable=False)
+    author_id = db.Column(db.Integer, db.ForeignKey("authors.id", ondelete='CASCADE'), index=True, nullable=False)
     author = db.relationship("Author",
                                  back_populates="commits",
                                  foreign_keys=[author_id],
                                  )
-    test_cases = db.relationship("TestCase")
+    test_cases = db.relationship("TestCase", passive_deletes=True)
 
     def __repr__(self):
         return {
