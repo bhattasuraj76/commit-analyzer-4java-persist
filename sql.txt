@@ -1,0 +1,11 @@
+CREATE TABLE authors
+(
+    id SERIAL,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR (255) NOT NULL,
+    CONSTRAINT authors_pkey PRIMARY KEY (id)
+);
+
+
+ALTER TABLE authors
+ADD CONSTRAINT authors_email_key UNIQUE (email);
