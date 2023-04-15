@@ -7,6 +7,7 @@ import plotly.express as px
 from flask import request, render_template, send_from_directory
 from app.analyzer.helpers import export_to_csv
 from app.services import RepositoryService
+from app.analyzer.utils import get_repo_name
 from app import app
 
 logger = logging.getLogger(__name__)
@@ -64,7 +65,9 @@ class RepositoryController:
             req_payload = request.args
             result1 = self.repository_service.analyze_repository(req_payload["url1"])
             result2 = self.repository_service.analyze_repository(req_payload["url2"])
-
+            project1 = get_repo_name(req_payload["url1"])
+            project2 = get_repo_name(req_payload["url2"])
+            
             df = pd.DataFrame(
                 {
                     "TestCases": [
@@ -84,18 +87,18 @@ class RepositoryController:
                         len(result2["removed_testcases_records"]),
                     ],
                     "Legend": [
-                        "Project 1",
-                        "Project 1",
-                        "Project 1",
-                        "Project 2",
-                        "Project 2",
-                        "Project 2",
+                        project1,
+                        project1,
+                        project1,
+                        project2,
+                        project2,
+                        project2,
                     ],
                 }
             )
             fig = px.bar(df, x="TestCases", y="Count", color="Legend", barmode="group")
             graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
-            return render_template("pages/compare_analyze.html", graphJSON=graphJSON)
+            return render_template("pages/compare_analyze.html", graphJSON=graphJSON, project1=project1, project2=project2)
         except Exception as err:
             return err.__str__()
 

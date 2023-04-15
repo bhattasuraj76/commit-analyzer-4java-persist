@@ -1,11 +1,54 @@
+CREATE TABLE repositories
+(
+    id SERIAL,
+    name VARCHAR(255) NOT NULL,
+    url VARCHAR(255)  NOT NULL,
+    CONSTRAINT repositories_pkey PRIMARY KEY (id),
+    CONSTRAINT repositories_url_key UNIQUE (url)
+);
+
 CREATE TABLE authors
 (
     id SERIAL,
     name VARCHAR(255) NOT NULL,
-    email VARCHAR (255) NOT NULL,
-    CONSTRAINT authors_pkey PRIMARY KEY (id)
+    email VARCHAR(255) NOT NULL,
+    CONSTRAINT authors_pkey PRIMARY KEY (id),
+    CONSTRAINT authors_email_key UNIQUE (email)
 );
 
+CREATE TABLE commits
+(
+    id SERIAL,
+    hash VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    datetime TIMESTAMP NOT NULL,
+    repository_id INT NOT NULL,
+    author_id INT NOT NULL,
+    CONSTRAINT commits_pkey PRIMARY KEY (id)
+);
 
-ALTER TABLE authors
-ADD CONSTRAINT authors_email_key UNIQUE (email);
+ALTER TABLE commits
+    ADD CONSTRAINT commits_author_id_fkey FOREIGN KEY (author_id)
+    REFERENCES authors 
+    ON DELETE CASCADE;
+
+
+ALTER TABLE commits
+    ADD CONSTRAINT commits_repository_id_fkey FOREIGN KEY (repository_id)
+    REFERENCES repositories (id) 
+    ON DELETE CASCADE;
+
+CREATE TABLE test_cases
+(
+    id SERIAL,
+    filename VARCHAR(255) NOT NULL,
+    testcase VARCHAR(255) NOT NULL,
+    type VARCHAR(255) NOT NULL,
+    commit_id INT,
+    CONSTRAINT test_cases_pkey PRIMARY KEY (id)
+);
+
+ALTER TABLE test_cases
+    ADD CONSTRAINT test_cases_commit_id_fkey FOREIGN KEY (commit_id)
+    REFERENCES commits (id) 
+    ON DELETE CASCADE;

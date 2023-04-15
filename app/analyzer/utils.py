@@ -30,7 +30,7 @@ def cleanup_function_prototype(func_prototype: str) -> str:
 
 
 # Strip characters polluting function name like '(', ')' and ' '
-def cleanup_function_name(func_name:str) -> str:
+def cleanup_function_name(func_name: str) -> str:
     return func_name.translate(func_name.maketrans("", "", "()")).strip()
 
 
@@ -39,6 +39,7 @@ def get_function_name_from_prototype(function_prototype):
     func_name_search = re.search(Pattern.FUNCTION_NAME.value, function_prototype)
     func_name = cleanup_function_name(func_name_search.group())
     return func_name
+
 
 # Convert datetime to local timezone
 def format_commit_datetime(commit_date: datetime) -> str:
