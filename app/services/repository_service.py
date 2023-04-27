@@ -167,7 +167,7 @@ class RepositoryService:
         )
         
         if testcase_type:
-            query = query.filter_by(type=testcase_type.name)
+            query = query.filter_by(type=testcase_type)
 
         testcases = query.all()
         return testcases
@@ -202,8 +202,8 @@ class RepositoryService:
     # Get all repository commits grouped by year
     def _get_repository_commits_by_year(self, repository):
         rawsql = f"""SELECT
-        count(date_trunc('year', commits.datetime)) AS count_1,
-        date_trunc('year', commits.datetime) AS date_trunc_2
+        count(date_trunc('year', commits.datetime)) AS count,
+        date_trunc('year', commits.datetime) AS date_trunc
         FROM commits
         WHERE repository_id = {repository.id}
         GROUP BY date_trunc('year', commits.datetime)

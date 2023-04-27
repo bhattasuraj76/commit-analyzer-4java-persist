@@ -2387,3 +2387,97 @@ WHERE commits.repository_id = %(repository_id_1)s GROUP BY date_trunc(%(date_tru
 2023-04-27 11:36:35,657 INFO werkzeug Thread-2 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 11:36:35] "GET /compare-analyze?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink&url2=https%3A%2F%2Fgithub.com%2Fgoogle%2Fclosure-compiler.git HTTP/1.1" 200 -
 2023-04-27 11:36:35,686 INFO werkzeug Thread-3 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 11:36:35] "GET /static/css/style.css HTTP/1.1" 200 -
 2023-04-27 11:36:36,111 INFO werkzeug Thread-4 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 11:36:36] "GET /static/images/favicon.ico HTTP/1.1" 200 -
+2023-04-27 15:05:38,340 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-04-27 15:05:38,520 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 15:05:39,421 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:05:39,427 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:05:39,447 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 15:05:39,456 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 15:05:47,926 INFO werkzeug Thread-2 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:05:47] "GET /compare-analyze?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink&url2=https%3A%2F%2Fgithub.com%2Fgoogle%2Fclosure-compiler.git HTTP/1.1" 200 -
+2023-04-27 15:05:47,998 INFO werkzeug Thread-3 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:05:47] "GET /static/css/style.css HTTP/1.1" 200 -
+2023-04-27 15:05:48,890 INFO werkzeug Thread-4 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:05:48] "GET /static/images/favicon.ico HTTP/1.1" 200 -
+2023-04-27 15:05:52,317 INFO werkzeug Thread-5 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:05:52] "GET / HTTP/1.1" 200 -
+2023-04-27 15:05:52,350 INFO werkzeug Thread-6 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:05:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-04-27 15:05:53,779 INFO werkzeug Thread-7 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:05:53] "GET /analyze?url=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-04-27 15:05:53,795 INFO werkzeug Thread-8 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:05:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-04-27 15:07:12,663 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-04-27 15:07:12,826 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 15:07:13,465 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:07:13,470 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:07:13,488 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 15:07:13,494 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 15:07:15,523 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-04-27 15:07:15,632 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 15:07:16,120 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:07:16,126 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:07:16,140 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 15:07:16,144 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 15:07:18,171 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-04-27 15:07:18,276 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 15:07:18,804 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:07:18,810 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:07:18,824 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 15:07:18,828 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 15:07:20,848 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-04-27 15:07:20,944 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 15:07:21,473 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:07:21,478 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 15:07:21,493 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 15:07:21,497 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 15:07:29,719 INFO werkzeug Thread-2 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:07:29] "GET /analyze?url=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-04-27 15:07:29,744 INFO werkzeug Thread-3 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:07:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2023-04-27 15:07:30,329 INFO werkzeug Thread-4 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 15:07:30] "GET /static/images/favicon.ico HTTP/1.1" 200 -
+2023-04-27 16:50:50,770 INFO werkzeug Thread-5 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 16:50:50] "GET /compare?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-04-27 16:50:50,854 INFO werkzeug Thread-6 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 16:50:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-04-27 16:50:55,905 INFO werkzeug Thread-7 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 16:50:55] "GET /compare-analyze?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink&url2=https%3A%2F%2Fgithub.com%2Fgoogle%2Fclosure-compiler.git HTTP/1.1" 200 -
+2023-04-27 16:50:55,925 INFO werkzeug Thread-8 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 16:50:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-04-27 16:51:34,985 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/controllers/repository_controller.py', reloading
+2023-04-27 16:51:35,139 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 16:51:35,961 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:51:35,966 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:51:35,986 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 16:51:35,991 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 16:51:38,015 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/controllers/repository_controller.py', reloading
+2023-04-27 16:51:38,108 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 16:51:38,607 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:51:38,615 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:51:38,641 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 16:51:38,649 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 16:51:41,686 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/controllers/repository_controller.py', reloading
+2023-04-27 16:51:41,781 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 16:51:42,264 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:51:42,269 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:51:42,283 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 16:51:42,288 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 16:51:47,346 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/controllers/repository_controller.py', reloading
+2023-04-27 16:51:47,442 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 16:51:47,934 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:51:47,939 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:51:47,954 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 16:51:47,959 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 16:51:57,775 INFO werkzeug Thread-2 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 16:51:57] "GET /compare-analyze?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink&url2=https%3A%2F%2Fgithub.com%2Fgoogle%2Fclosure-compiler.git HTTP/1.1" 200 -
+2023-04-27 16:51:57,906 INFO werkzeug Thread-3 (process_request_thread): 127.0.0.1 - - [27/Apr/2023 16:51:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-04-27 16:52:06,638 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/controllers/repository_controller.py', reloading
+2023-04-27 16:52:06,759 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 16:52:07,416 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:52:07,426 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:52:07,445 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 16:52:07,449 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 16:52:10,486 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/controllers/repository_controller.py', reloading
+2023-04-27 16:52:10,591 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 16:52:11,106 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:52:11,111 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:52:11,126 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 16:52:11,130 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 16:52:24,266 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/controllers/repository_controller.py', reloading
+2023-04-27 16:52:24,346 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 16:52:24,982 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:52:24,987 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:52:25,007 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 16:52:25,012 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-04-27 16:52:26,025 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/controllers/repository_controller.py', reloading
+2023-04-27 16:52:26,131 INFO werkzeug MainThread:  * Restarting with stat
+2023-04-27 16:52:26,620 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:52:26,625 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-04-27 16:52:26,638 WARNING werkzeug MainThread:  * Debugger is active!
+2023-04-27 16:52:26,643 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
