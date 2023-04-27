@@ -18,25 +18,22 @@
             <div class="col-12 col-lg-6 mb-3">
                 <div><a href="{{ url_for('web_blueprint.index') }}">Go Home</a></div>
                 <div class="mb-3">
-                    <div id='chart' class='chart'”></div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <a href="{{ url_for('web_blueprint.export')+'?url='+request.args.get('url1') }}" target="_blank">Export {{project1}} </a>
+                    <div id='testcases_chart' class='chart'></div>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="{{ url_for('web_blueprint.export')+'?url='+request.args.get('url1') }}" target="_blank">Export {{project1}} </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="{{ url_for('web_blueprint.export')+'?url='+request.args.get('url2') }}" target="_blank">Export {{project2}}</a>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <a href="{{ url_for('web_blueprint.export')+'?url='+request.args.get('url2') }}" target="_blank">Export {{project2}}</a>
-                    </div>
                 </div>
-                
-<!--                <form action="{{ url_for('web_blueprint.analyze') }}" method="GET">-->
-<!--                    <div class="mb-3">-->
-<!--                        <button type="submit" class="btn btn-primary mb-3">Analyze</button>-->
-<!--                    </div>-->
-<!--                </form>-->
+                <hr>
+                <div class="mb-2">
+                    <div id='commits_chart' class='chart'></div>
+                </div>
             </div>
         </div>
-
 </div>
 
 {% endblock %}
@@ -46,7 +43,10 @@
 {{ super() }}
 <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 <script type='text/javascript'>
-  var graphs = {{graphJSON | safe}};
-  Plotly.plot('chart',graphs,{});
+  var testcases_graphs = {{testcases_graphJSON | safe}};
+  Plotly.plot('testcases_chart',testcases_graphs,{});
+
+  var commits_graphs = {{commits_graphJSON | safe}};
+  Plotly.plot('commits_chart',commits_graphs,{});
 </script>
 {% endblock %}

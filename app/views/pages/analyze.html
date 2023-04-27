@@ -23,7 +23,12 @@
             </form>
             <a href="{{ url_for('web_blueprint.export')+'?url='+request.args.get('url') }}" target="_blank">Export</a>
             <div class="mb-3">
-                <div id='chart' class='chart' ”></div>
+                <div id='testcases_chart' class='chart'></div>
+            </div>
+           
+            <hr>
+            <div class="mb-2">
+                <div id='commits_chart' class='chart'></div>
             </div>
             <div class="d-flex justify-content-between">
                 <a href="{{ url_for('web_blueprint.index') }}">Go Back</a>
@@ -33,9 +38,7 @@
                         <button type="submit" class="btn btn-primary btn-text mb-3">Compare</button>
                     </div>
                 </form>
-
             </div>
-
         </div>
     </div>
 
@@ -48,8 +51,10 @@
 {{ super() }}
 <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 <script type='text/javascript'>
-  var graphs = {{graphJSON | safe}};
-  Plotly.plot('chart',graphs,{});
+  var testcases_graphs = {{testcases_graphJSON | safe}};
+  Plotly.plot('testcases_chart',testcases_graphs,{});
 
+  var commits_graphs = {{commits_graphJSON | safe}};
+  Plotly.plot('commits_chart',commits_graphs,{});
 </script>
 {% endblock %}

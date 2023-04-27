@@ -4,7 +4,7 @@ import logging
 import pandas as pd
 import plotly
 import plotly.express as px
-from flask import request, render_template, send_from_directory
+from flask import jsonify, request, render_template, send_from_directory
 from app.analyzer.helpers import export_to_csv
 from app.services import RepositoryService
 from app.analyzer.utils import get_repo_name
@@ -20,8 +20,11 @@ class RepositoryController:
     def analyze(self):
         try:
             req_payload = request.args
-            result = self.repository_service.analyze_repository(req_payload["url"])
-            df = pd.DataFrame(
+            # Parse testcases added, modified and deleted
+            testcases_result = self.repository_service.analyze_repository(
+                req_payload["url"]
+            )
+            testcases_df = pd.DataFrame(
                 {
                     "TestCases": [
                         "Added Test Cases",
@@ -29,9 +32,9 @@ class RepositoryController:
                         "Deleted Test Cases",
                     ],
                     "Count": [
-                        len(result["added_testcases_records"]),
-                        len(result["modified_testcases_records"]),
-                        len(result["removed_testcases_records"]),
+                        len(testcases_result["added_testcases_records"]),
+                        len(testcases_result["modified_testcases_records"]),
+                        len(testcases_result["removed_testcases_records"]),
                     ],
                     "Legend": [
                         "Added Test Cases",
@@ -40,10 +43,42 @@ class RepositoryController:
                     ],
                 }
             )
-            fig = px.bar(df, x="TestCases", y="Count", color="Legend", barmode="group")
-            graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
-            return render_template("pages/analyze.html", graphJSON=graphJSON)
-            # return jsonify({"added": len(added), "removed": len(removed), "modified": len(modified)})
+            testcases_fig = px.bar(
+                testcases_df,
+                x="TestCases",
+                y="Count",
+                color="Legend",
+                barmode="group",
+                title="Total Testcases Added, Modified and Removed",
+            )
+            testcases_graphJSON = json.dumps(
+                testcases_fig, cls=plotly.utils.PlotlyJSONEncoder
+            )
+
+            # Parse commits by year
+            commits_result = self.repository_service.analyze_commits_by_year(
+                req_payload["url"]
+            )
+            commits_result_md = [
+                ("Total commits by year", q["count"], q["year"]) for q in commits_result
+            ]
+            commits_result_by_year_df = pd.DataFrame(
+                commits_result_md, columns=["type", "count", "year"]
+            )
+            commits_by_year_fig = px.line(
+                commits_result_by_year_df,
+                x="year",
+                y="count",
+                title="Total Commits By Year",
+            )
+            commits_graphJSON = json.dumps(
+                commits_by_year_fig, cls=plotly.utils.PlotlyJSONEncoder
+            )
+            return render_template(
+                "pages/analyze.html",
+                testcases_graphJSON=testcases_graphJSON,
+                commits_graphJSON=commits_graphJSON,
+            )
         except Exception as err:
             logger.error(err)
             return err.__str__()
@@ -67,8 +102,8 @@ class RepositoryController:
             result2 = self.repository_service.analyze_repository(req_payload["url2"])
             project1 = get_repo_name(req_payload["url1"])
             project2 = get_repo_name(req_payload["url2"])
-            
-            df = pd.DataFrame(
+
+            testcases_df = pd.DataFrame(
                 {
                     "TestCases": [
                         "Added Test Cases",
@@ -96,9 +131,54 @@ class RepositoryController:
                     ],
                 }
             )
-            fig = px.bar(df, x="TestCases", y="Count", color="Legend", barmode="group")
-            graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
-            return render_template("pages/compare_analyze.html", graphJSON=graphJSON, project1=project1, project2=project2)
+            testcases_fig = px.bar(
+                testcases_df,
+                x="TestCases",
+                y="Count",
+                color="Legend",
+                barmode="group",
+                title="Total Testcases Added, Modified and Removed",
+            )
+            testcases_graphJSON = json.dumps(
+                testcases_fig, cls=plotly.utils.PlotlyJSONEncoder
+            )
+
+            # Parse commits by year
+            commits_result1 = self.repository_service.analyze_commits_by_year(
+                req_payload["url1"]
+            )
+            commits_result1_md = [
+                (project1, q["count"], q["year"]) for q in commits_result1
+            ]
+            commits_result2 = self.repository_service.analyze_commits_by_year(
+                req_payload["url2"]
+            )
+            commits_result2_md = [
+                (project2, q["count"], q["year"]) for q in commits_result2
+            ]
+            commits_result_by_year = commits_result1_md + commits_result2_md
+            commits_result_by_year = sorted(commits_result_by_year, key=lambda x: x[2])
+            commits_result_by_year_df = pd.DataFrame(
+                commits_result_by_year, columns=["project", "count", "year"]
+            )
+            commits_by_year_fig = px.line(
+                commits_result_by_year_df,
+                x="year",
+                y="count",
+                color="project",
+                title="Total Commits By Year",
+            )
+            commits_graphJSON = json.dumps(
+                commits_by_year_fig, cls=plotly.utils.PlotlyJSONEncoder
+            )
+
+            return render_template(
+                "pages/compare_analyze.html",
+                testcases_graphJSON=testcases_graphJSON,
+                commits_graphJSON=commits_graphJSON,
+                project1=project1,
+                project2=project2,
+            )
         except Exception as err:
             return err.__str__()
 
@@ -112,7 +192,9 @@ class RepositoryController:
                 filename="report",
                 dir=app.config["CSV_FOLDER"],
             )
-            return send_from_directory("../"+ app.config["CSV_FOLDER"], filename, as_attachment=True)
+            return send_from_directory(
+                "../" + app.config["CSV_FOLDER"], filename, as_attachment=True
+            )
         except Exception as err:
             logger.error(err)
             return err.__str__()

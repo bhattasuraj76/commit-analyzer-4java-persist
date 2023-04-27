@@ -9,6 +9,8 @@ https://docs.sqlalchemy.org/en/20/core/connections.html#sqlalchemy.engine.Result
 
 return jsonify(repositories = [item.to_json() for item in repositories])
 
-https://github.com/ThomasJaspers/java-junit-sample
+
 https://github.com/google/tink
 https://github.com/google/closure-compiler.git
+
+https://github.com/bhattasuraj76/test-java

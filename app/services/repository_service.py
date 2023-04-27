@@ -10,6 +10,8 @@ from app import db
 from app.analyzer import analyze_test_statistics
 from app.models import Repository, TestCase, TestCaseType, Commit, Author
 from app.analyzer.utils import get_repo_name
+import sqlalchemy as sa
+
 
 logger = logging.getLogger(__name__)
 
@@ -62,6 +64,19 @@ class RepositoryService:
                 "removed_testcases_records": removed_testcases_records,
                 "modified_testcases_records": modified_testcases_records,
             }
+        except Exception as err:
+            raise err
+
+    def analyze_commits_by_year(self, url):
+        try:
+            # Check if the repository exists i.e previously analyzed ?
+            repository = self._find_repository_by_url(url)
+            if repository:
+                # Get associated commits by year
+                commits = self._get_repository_commits_by_year(repository)
+                return commits
+            else:
+                return None
         except Exception as err:
             raise err
 
@@ -150,8 +165,9 @@ class RepositoryService:
         query = db.session.query(TestCase).filter(
             TestCase.commit_id.in_(commits_id),
         )
+        
         if testcase_type:
-            query.filter_by(type=testcase_type)
+            query = query.filter_by(type=testcase_type.name)
 
         testcases = query.all()
         return testcases
@@ -176,7 +192,31 @@ class RepositoryService:
                 testcases = self._get_testcases(commits_id)
                 data = []
                 for each in testcases:
-                    data.append([each.commit.hash, each.filename, each.testcase, each.type])
+                    data.append(
+                        [each.commit.hash, each.filename, each.testcase, each.type]
+                    )
                 return data
         else:
             return None
+
+    # Get all repository commits grouped by year
+    def _get_repository_commits_by_year(self, repository):
+        rawsql = f"""SELECT
+        count(date_trunc('year', commits.datetime)) AS count_1,
+        date_trunc('year', commits.datetime) AS date_trunc_2
+        FROM commits
+        WHERE repository_id = {repository.id}
+        GROUP BY date_trunc('year', commits.datetime)
+        ORDER BY date_trunc('year', commits.datetime)
+        """
+        q = db.session.execute(sa.sql.text(rawsql))
+        result = [{"count": count, "year": date.strftime("%Y")} for count, date in q]
+        return result 
+
+        # commits = (
+        #     db.session.query(sa.func.date_trunc("month", Commit.datetime), sa.func.count(Commit.id))
+        #     .filter_by(repository_id=repository.id)
+        #     .group_by(sa.func.date_trunc("month", Commit.datetime), Commit.id)
+        #     .all()
+        # )
+        # return commits
