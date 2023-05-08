@@ -1,16 +1,10 @@
-import json
 import logging
-
-import pandas as pd
-import plotly
-import plotly.express as px
-from flask import request
-
+import sqlalchemy as sa
 from app import db
 from app.analyzer import analyze_test_statistics
 from app.models import Repository, TestCase, TestCaseType, Commit, Author
 from app.analyzer.utils import get_repo_name
-import sqlalchemy as sa
+
 
 
 logger = logging.getLogger(__name__)
@@ -182,6 +176,17 @@ class RepositoryService:
         Repository.query.filter_by(url=url).delete()
         db.session.commit()
 
+    # Get all testcases by commit id and type
+    def _get_testcases(self, commits_id, testcase_type=None):
+        query = db.session.query(TestCase).filter(
+            TestCase.commit_id.in_(commits_id),
+        )
+        
+        if testcase_type:
+            query = query.filter_by(type=testcase_type)
+
+        testcases = query.all()
+        return testcases
     def get_all_testcases(self, url):
         repository = self._find_repository_by_url(url)
         if repository:
@@ -198,6 +203,19 @@ class RepositoryService:
                 return data
         else:
             return None
+
+    def analyze_commits_by_year(self, url):
+        try:
+            # Check if the repository exists i.e previously analyzed ?
+            repository = self._find_repository_by_url(url)
+            if repository:
+                # Get associated commits by year
+                commits = self._get_repository_commits_by_year(repository)
+                return commits
+            else:
+                return None
+        except Exception as err:
+            raise err
 
     # Get all repository commits grouped by year
     def _get_repository_commits_by_year(self, repository):

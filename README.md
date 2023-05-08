@@ -1,16 +1,38 @@
-flask --app  app/models/crud.py db migrate -m "Initial migration"
+
+## Getting Started
+
+To run the project, python should be installed on your machine.
+Check if it is installed or not using
+
+```
+python --version
+```
+
+If it is not installed, download and install python from https://www.python.org/downloads/
+
+
+Then, setup virtual environment (optional)
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Then, install the requirements:
+
+```
+pip install -r requirements.txt
+```
+
+Then, create a .env file and copy contents from .env.example in the project root:
+
+```
+mv .env.example .env
+```
+
+Then, run the application:
+
+```
 flask run --debug  --port 5001
-export FLASK_APP=main.py
-export FLASK_ENV=development
-export FLASK_DEBUG=1
+```
 
-After running query, sqlalchemy result could be attached of one the mentioned methods
-https://docs.sqlalchemy.org/en/20/core/connections.html#sqlalchemy.engine.Result
-
-return jsonify(repositories = [item.to_json() for item in repositories])
-
-
-https://github.com/google/tink
-https://github.com/google/closure-compiler.git
-
-https://github.com/bhattasuraj76/test-java

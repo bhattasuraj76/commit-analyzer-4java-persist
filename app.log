@@ -2481,3 +2481,136 @@ WHERE commits.repository_id = %(repository_id_1)s GROUP BY date_trunc(%(date_tru
 2023-04-27 16:52:26,625 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
 2023-04-27 16:52:26,638 WARNING werkzeug MainThread:  * Debugger is active!
 2023-04-27 16:52:26,643 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-01 22:35:25,859 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-01 22:35:25,870 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-01 22:35:25,893 INFO werkzeug MainThread: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2023-05-01 22:35:25,893 INFO werkzeug MainThread: [33mPress CTRL+C to quit[0m
+2023-05-01 22:35:25,894 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-01 22:35:26,389 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-01 22:35:26,395 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-01 22:35:26,410 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-01 22:35:26,419 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-01 22:35:38,106 INFO werkzeug Thread-2 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:35:38] "GET / HTTP/1.1" 200 -
+2023-05-01 22:35:38,184 INFO werkzeug Thread-3 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:35:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-01 22:35:38,708 INFO werkzeug Thread-4 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:35:38] "GET /static/images/favicon.ico HTTP/1.1" 200 -
+2023-05-01 22:36:28,295 INFO werkzeug Thread-5 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:36:28] "GET /analyze?url=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-01 22:36:28,360 INFO werkzeug Thread-6 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:36:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-01 22:37:52,854 INFO werkzeug Thread-7 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:37:52] "GET /compare?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-01 22:37:52,880 INFO werkzeug Thread-8 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:37:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-01 22:37:59,842 INFO werkzeug Thread-9 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:37:59] "GET /compare-analyze?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink&url2=https%3A%2F%2Fgithub.com%2Fgoogle%2Fclosure-compiler.git HTTP/1.1" 200 -
+2023-05-01 22:37:59,871 INFO werkzeug Thread-10 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:37:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-01 22:41:04,670 INFO werkzeug Thread-11 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:41:04] "GET /export?url=https://github.com/google/tink HTTP/1.1" 200 -
+2023-05-01 22:45:14,544 INFO werkzeug Thread-12 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:45:14] "GET / HTTP/1.1" 200 -
+2023-05-01 22:45:14,641 INFO werkzeug Thread-13 (process_request_thread): 127.0.0.1 - - [01/May/2023 22:45:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-02 23:32:19,458 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:32:19,465 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:32:19,490 INFO werkzeug MainThread: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2023-05-02 23:32:19,490 INFO werkzeug MainThread: [33mPress CTRL+C to quit[0m
+2023-05-02 23:32:19,490 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-02 23:32:20,018 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:32:20,023 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:32:20,037 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-02 23:32:20,045 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-02 23:34:16,572 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-05-02 23:34:16,675 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-02 23:34:17,296 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:34:17,304 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:34:17,324 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-02 23:34:17,330 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-02 23:34:18,347 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-05-02 23:34:18,453 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-02 23:34:18,919 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:34:18,925 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:34:18,940 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-02 23:34:18,944 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-02 23:34:25,013 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-05-02 23:34:25,099 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-02 23:34:25,600 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:34:25,608 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:34:25,630 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-02 23:34:25,634 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-02 23:34:34,740 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-05-02 23:34:34,840 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-02 23:34:35,357 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:34:35,364 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-02 23:34:35,379 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-02 23:34:35,384 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-02 23:39:42,280 INFO werkzeug Thread-2 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:39:42] "GET / HTTP/1.1" 200 -
+2023-05-02 23:39:42,310 INFO werkzeug Thread-3 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:39:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-02 23:40:58,140 INFO werkzeug Thread-4 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:40:58] "GET /analyze?url=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-02 23:40:58,159 INFO werkzeug Thread-5 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:40:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-02 23:48:24,628 INFO werkzeug Thread-6 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:48:24] "GET /analyze?url=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-02 23:48:24,645 INFO werkzeug Thread-7 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:48:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-02 23:48:24,822 INFO werkzeug Thread-8 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:48:24] "GET /static/images/favicon.ico HTTP/1.1" 200 -
+2023-05-02 23:52:10,971 INFO werkzeug Thread-9 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:52:10] "GET /compare?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-02 23:52:10,991 INFO werkzeug Thread-10 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:52:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-02 23:52:16,171 INFO werkzeug Thread-11 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:52:16] "GET /compare-analyze?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink&url2=https%3A%2F%2Fgithub.com%2Fgoogle%2Fclosure-compiler.git HTTP/1.1" 200 -
+2023-05-02 23:52:16,198 INFO werkzeug Thread-12 (process_request_thread): 127.0.0.1 - - [02/May/2023 23:52:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-03 00:16:02,264 INFO werkzeug Thread-13 (process_request_thread): 127.0.0.1 - - [03/May/2023 00:16:02] "GET / HTTP/1.1" 200 -
+2023-05-03 00:16:02,286 INFO werkzeug Thread-14 (process_request_thread): 127.0.0.1 - - [03/May/2023 00:16:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-03 12:09:36,872 INFO werkzeug Thread-15 (process_request_thread): 127.0.0.1 - - [03/May/2023 12:09:36] "GET / HTTP/1.1" 200 -
+2023-05-03 12:09:36,928 INFO werkzeug Thread-16 (process_request_thread): 127.0.0.1 - - [03/May/2023 12:09:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-04 14:14:55,161 INFO werkzeug Thread-17 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:14:55] "GET / HTTP/1.1" 200 -
+2023-05-04 14:14:55,183 INFO werkzeug Thread-18 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:14:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-04 14:33:27,751 INFO werkzeug Thread-19 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:33:27] "GET / HTTP/1.1" 200 -
+2023-05-04 14:33:27,804 INFO werkzeug Thread-20 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:33:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-04 14:33:59,480 INFO werkzeug Thread-21 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:33:59] "GET /analyze?url=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-04 14:33:59,510 INFO werkzeug Thread-22 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:33:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-04 14:35:03,379 INFO werkzeug Thread-23 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:35:03] "GET /export?url=https://github.com/google/tink HTTP/1.1" 200 -
+2023-05-04 14:37:46,058 INFO werkzeug Thread-24 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:37:46] "GET /export?url=https://github.com/google/tink HTTP/1.1" 200 -
+2023-05-04 14:38:15,871 INFO werkzeug Thread-25 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:38:15] "GET /export?url=https://github.com/google/tink HTTP/1.1" 200 -
+2023-05-04 14:38:34,998 INFO werkzeug Thread-26 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:38:34] "GET /export?url=https://github.com/google/tink HTTP/1.1" 200 -
+2023-05-04 14:40:08,435 INFO werkzeug Thread-27 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:40:08] "GET /compare?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-04 14:40:08,484 INFO werkzeug Thread-28 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:40:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-04 14:40:36,383 INFO werkzeug Thread-29 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:40:36] "GET /compare-analyze?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink&url2=https%3A%2F%2Fgithub.com%2Fgoogle%2Fclosure-compiler.git HTTP/1.1" 200 -
+2023-05-04 14:40:36,402 INFO werkzeug Thread-30 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:40:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-04 14:42:02,285 INFO werkzeug Thread-31 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:42:02] "GET / HTTP/1.1" 200 -
+2023-05-04 14:42:02,308 INFO werkzeug Thread-32 (process_request_thread): 127.0.0.1 - - [04/May/2023 14:42:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-05 11:29:52,249 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:29:52,262 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:29:52,290 INFO werkzeug MainThread: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2023-05-05 11:29:52,290 INFO werkzeug MainThread: [33mPress CTRL+C to quit[0m
+2023-05-05 11:29:52,291 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-05 11:29:52,794 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:29:52,800 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:29:52,814 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-05 11:29:52,822 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-05 11:30:02,612 INFO werkzeug Thread-2 (process_request_thread): 127.0.0.1 - - [05/May/2023 11:30:02] "GET / HTTP/1.1" 200 -
+2023-05-05 11:30:02,650 INFO werkzeug Thread-3 (process_request_thread): 127.0.0.1 - - [05/May/2023 11:30:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-05 11:30:07,164 INFO werkzeug Thread-4 (process_request_thread): 127.0.0.1 - - [05/May/2023 11:30:07] "GET /analyze?url=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-05 11:30:07,182 INFO werkzeug Thread-5 (process_request_thread): 127.0.0.1 - - [05/May/2023 11:30:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-05 11:32:02,693 INFO werkzeug Thread-6 (process_request_thread): 127.0.0.1 - - [05/May/2023 11:32:02] "GET /compare?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink HTTP/1.1" 200 -
+2023-05-05 11:32:02,764 INFO werkzeug Thread-7 (process_request_thread): 127.0.0.1 - - [05/May/2023 11:32:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-05 11:33:02,577 INFO werkzeug Thread-8 (process_request_thread): 127.0.0.1 - - [05/May/2023 11:33:02] "GET /compare-analyze?url1=https%3A%2F%2Fgithub.com%2Fgoogle%2Ftink&url2=https%3A%2F%2Fgithub.com%2Fgoogle%2Fclosure-compiler.git HTTP/1.1" 200 -
+2023-05-05 11:33:02,595 INFO werkzeug Thread-9 (process_request_thread): 127.0.0.1 - - [05/May/2023 11:33:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-05 11:49:09,547 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-05-05 11:49:09,698 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-05 11:49:10,551 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:49:10,557 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:49:10,578 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-05 11:49:10,584 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-05 11:50:18,545 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-05-05 11:50:18,655 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-05 11:50:19,287 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:50:19,292 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:50:19,311 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-05 11:50:19,316 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-05 11:51:09,049 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-05-05 11:51:09,161 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-05 11:51:09,829 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:51:09,835 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:51:09,856 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-05 11:51:09,860 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-05 11:51:13,931 INFO werkzeug MainThread:  * Detected change in '/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project/app/services/repository_service.py', reloading
+2023-05-05 11:51:14,040 INFO werkzeug MainThread:  * Restarting with stat
+2023-05-05 11:51:14,544 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:51:14,549 DEBUG git.cmd MainThread: Popen(['git', 'version'], cwd=/Users/david/Library/CloudStorage/GoogleDrive-suraj.bhatta@ndsu.edu (3-16-23 1:02 PM)/My Drive/ndsu/dbms/project, universal_newlines=False, shell=None, istream=None)
+2023-05-05 11:51:14,564 WARNING werkzeug MainThread:  * Debugger is active!
+2023-05-05 11:51:14,568 INFO werkzeug MainThread:  * Debugger PIN: 209-195-493
+2023-05-05 12:38:35,753 INFO werkzeug Thread-2 (process_request_thread): 127.0.0.1 - - [05/May/2023 12:38:35] "GET / HTTP/1.1" 200 -
+2023-05-05 12:38:35,795 INFO werkzeug Thread-3 (process_request_thread): 127.0.0.1 - - [05/May/2023 12:38:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-05 14:08:59,371 INFO werkzeug Thread-4 (process_request_thread): 127.0.0.1 - - [05/May/2023 14:08:59] "GET / HTTP/1.1" 200 -
+2023-05-05 14:08:59,401 INFO werkzeug Thread-5 (process_request_thread): 127.0.0.1 - - [05/May/2023 14:08:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
