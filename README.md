@@ -1,3 +1,10 @@
+# commit-analyzer-4java-persist
+
+This project is an extension of my previous work [commit-analyzer-4java](https://github.com/bhattasuraj76/commit-analyzer-4java). It utilizes PostgreSQL to persistently store analyzed git commit results, thereby eliminating the need for recomputations.
+
+---
+
+This revised version provides clearer formatting and includes a hyperlink to the previous work for easy reference.
 
 ## Getting Started
 
@@ -35,4 +42,9 @@ Then, run the application:
 ```
 flask run --debug  --port 5001
 ```
+
+
+**Note:**
+Before proceeding, please ensure that you correctly configure the PostgreSQL database credentials in the [development.py](app/config/development.py) file. Additionally, make sure that the database is correctly set up using the SQL commands provided in the [sql.txt](/sql.txt) file.
+
 
